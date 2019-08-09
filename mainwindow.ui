@@ -1,0 +1,1062 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>826</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="CentralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <layout class="QVBoxLayout" name="LeftLayout">
+      <item>
+       <widget class="OpenGLWidget" name="OpenGL">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="BottomLayout">
+        <item>
+         <widget class="QGroupBox" name="FrameRateGroup">
+          <property name="title">
+           <string/>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_7">
+           <item>
+            <widget class="QLabel" name="FrameRateLabel">
+             <property name="text">
+              <string>frame rate</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="PlaybackGroup">
+          <property name="title">
+           <string/>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <widget class="QPushButton" name="PlayButton">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="PauseButton">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line1">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="StepBackwardButton">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="StepForwardButton">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line2">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSlider" name="StepSlider">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line3">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="StepLabel">
+             <property name="text">
+              <string>? / ?</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="RightLayout">
+      <item>
+       <widget class="QTabWidget" name="InfoTab">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="currentIndex">
+         <number>1</number>
+        </property>
+        <widget class="QWidget" name="AtomTab">
+         <attribute name="title">
+          <string>Atom</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <widget class="QLabel" name="AtomName">
+            <property name="text">
+             <string>Name :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="AtomElement">
+            <property name="text">
+             <string>Element :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="AtomRMSDTitle">
+            <property name="text">
+             <string>RMSD</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="AtomRMSDSquaredNorm">
+            <property name="text">
+             <string> len :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="AtomRMSDDirection">
+            <property name="text">
+             <string> dir : (     ,     ,     )</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="AtomMinRMSD">
+            <property name="text">
+             <string> min :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="AtomMaxRMSD">
+            <property name="text">
+             <string> max :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="AtomRMSF">
+            <property name="text">
+             <string>RMSF :</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="ResidueTab">
+         <attribute name="title">
+          <string>Residue</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <item>
+           <widget class="QLabel" name="ResidueChain">
+            <property name="text">
+             <string>Chain :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="ResidueName">
+            <property name="text">
+             <string>Name :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="ResidueSequence">
+            <property name="text">
+             <string>Sequence :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="ResidueAtoms">
+            <property name="text">
+             <string>Atoms :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="ResidueRMSDTitle">
+            <property name="text">
+             <string>RMSD</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="ResidueRMSDSquaredNorm">
+            <property name="text">
+             <string> len :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="ResidueMinRMSD">
+            <property name="text">
+             <string> min :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="ResidueMaxRMSD">
+            <property name="text">
+             <string> max :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="ResidueRMSF">
+            <property name="text">
+             <string>RMSF :</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="ColorSchemeTab">
+         <attribute name="title">
+          <string>CS</string>
+         </attribute>
+         <layout class="QGridLayout" name="gridLayout_2"/>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="AtomGroup">
+        <property name="title">
+         <string>Atom</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2"/>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="ResidueGroup">
+        <property name="title">
+         <string>Residue</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_3"/>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="TrajectoryGroup">
+        <property name="title">
+         <string>Trajectory</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <layout class="QGridLayout" name="AbsValuesGroup">
+           <item row="1" column="0">
+            <widget class="QLabel" name="AbsMinLabel1">
+             <property name="text">
+              <string>min :</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLabel" name="AbsResidueLabel2">
+             <property name="text">
+              <string>Residue</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1" alignment="Qt::AlignHCenter">
+            <widget class="QLabel" name="AbsResidueLabel1">
+             <property name="text">
+              <string>Residue</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="2" alignment="Qt::AlignBottom">
+            <widget class="QLabel" name="AbsAtomLabel2">
+             <property name="text">
+              <string>Atom</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLabel" name="AbsResidueMaxRMSF">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QLabel" name="AbsAtomLabel1">
+             <property name="text">
+              <string>Atom</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QLabel" name="AbsAtomMinRMSF">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="AbsMaxLabel1">
+             <property name="text">
+              <string>max :</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLabel" name="AbsResidueMinRMSF">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0" alignment="Qt::AlignHCenter">
+            <widget class="QLabel" name="AbsRMSDLabel">
+             <property name="text">
+              <string>RMSD</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="AbsRMSFLabel">
+             <property name="text">
+              <string>RMSF</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QLabel" name="AbsAtomMaxRMSF">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="AbsMinLabel2">
+             <property name="text">
+              <string>min :</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="AbsMaxLabel2">
+             <property name="text">
+              <string>max :</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QLabel" name="AbsResidueMinRMSD">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QLabel" name="AbsResidueMaxRMSD">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="2">
+            <widget class="QLabel" name="AbsAtomMinRMSD">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="2">
+            <widget class="QLabel" name="AbsAtomMaxRMSD">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="ResiduesWindowButton">
+        <property name="text">
+         <string>Residues Window</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="OutlineGroup">
+        <property name="title">
+         <string>Outline</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QCheckBox" name="GrayscaleCheckbox">
+           <property name="text">
+            <string>grayscale</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="OutlineModeLayout">
+           <item>
+            <widget class="QLabel" name="OutlineModeLabel">
+             <property name="text">
+              <string>Mode</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="OutlineModeComboBox">
+             <item>
+              <property name="text">
+               <string>Residue RMSF</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Residue RMSD</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Atom RMSF</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Atom RMSD</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="OutlineBoundaryLayout">
+           <item>
+            <widget class="QLabel" name="OutlineBoundaryLabel">
+             <property name="text">
+              <string>Boundary</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="OutlineBoundaryComboBox">
+             <item>
+              <property name="text">
+               <string>absolute</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>relative</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QWidget" name="widget" native="true">
+           <layout class="QGridLayout" name="ModeLayout">
+            <item row="1" column="1" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+             <widget class="QRadioButton" name="ResidueRMSFButton">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+             <widget class="QRadioButton" name="AtomRMSFButton">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="AtomLabel">
+              <property name="text">
+               <string>Atom</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="2" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+             <widget class="QRadioButton" name="ResidueRMSDButton">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="ResidueLabel">
+              <property name="text">
+               <string>Residue</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="2" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+             <widget class="QRadioButton" name="AtomRMSDButton">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLabel" name="RMSFLabel">
+              <property name="text">
+               <string>RMSF</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <widget class="QLabel" name="RMSDLabel">
+              <property name="text">
+               <string>RMSD</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="ThicknessLayout">
+           <item>
+            <widget class="QLabel" name="ThicknessLabel">
+             <property name="text">
+              <string>Thickness</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSlider" name="ThicknessSlider">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="ColorSchemeLayout">
+           <item>
+            <layout class="QVBoxLayout" name="ColorSchemePreviewBox">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="ColorSchemePreviewLabel">
+               <property name="text">
+                <string/>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignHCenter|Qt::AlignTop</set>
+               </property>
+               <property name="margin">
+                <number>2</number>
+               </property>
+              </widget>
+             </item>
+             <item alignment="Qt::AlignBottom">
+              <widget class="QWidget" name="ColorSchemePreview" native="true">
+               <property name="autoFillBackground">
+                <bool>false</bool>
+               </property>
+               <layout class="QHBoxLayout" name="ColorSchemePreviewLayout"/>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QSlider" name="OutlineFilterValue">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="PaletteLayout">
+             <item>
+              <widget class="QLabel" name="PaletteLabel">
+               <property name="text">
+                <string>Palette</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="PaletteComboBox"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="ColorSchemeSizeLayout">
+             <item>
+              <widget class="QLabel" name="ColorSchemeSizeLabel">
+               <property name="text">
+                <string>Size</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="ColorSchemeSizeComboBox"/>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QWidget" name="widget" native="true">
+           <layout class="QVBoxLayout" name="BoundaryLayout">
+            <item>
+             <widget class="QLabel" name="BoundaryLabel">
+              <property name="text">
+               <string>Boundary Values</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="BoundaryButtons">
+              <item>
+               <widget class="QRadioButton" name="AbsoluteBoundaryButton">
+                <property name="text">
+                 <string>absolute</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="RelativeBoundaryButton">
+                <property name="text">
+                 <string>relative</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTabWidget" name="LightingTabWidget">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="SSAOTab">
+         <attribute name="title">
+          <string>SSAO</string>
+         </attribute>
+         <layout class="QGridLayout" name="gridLayout_4">
+          <item row="1" column="1">
+           <widget class="QSlider" name="SSAOKernelSizeSlider">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QCheckBox" name="SSAOActive">
+            <property name="text">
+             <string>active</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="SSAOKernelSizeLabel">
+            <property name="text">
+             <string>kernel size :</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QCheckBox" name="SSAOBlur">
+            <property name="text">
+             <string>blur</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QSlider" name="SSAONoiseSizeSlider">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="SSAONoiseSizeLabel">
+            <property name="text">
+             <string>noise size :</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="SSAORadiusLabel">
+            <property name="text">
+             <string>radius :</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QSlider" name="SSAORadiusSlider">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1">
+           <widget class="QSlider" name="SSAOBiasSlider">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLabel" name="SSAOBiasLabel">
+            <property name="text">
+             <string>bias :</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="LightTab">
+         <attribute name="title">
+          <string>Light</string>
+         </attribute>
+         <layout class="QGridLayout" name="gridLayout_3">
+          <item row="0" column="0">
+           <widget class="QCheckBox" name="LightAttenuation">
+            <property name="text">
+             <string>attenuation</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="MaterialTab">
+         <attribute name="title">
+          <string>Material</string>
+         </attribute>
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="2" column="1">
+           <widget class="QSlider" name="Material_Diffuse_Slider">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QSlider" name="Material_Specular_Slider">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="Material_Diffuse_Label">
+            <property name="text">
+             <string>diffuse :</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="Material_Ambient_Label">
+            <property name="text">
+             <string>ambient :</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QSlider" name="Material_Ambient_Slider">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1">
+           <widget class="QSlider" name="Material_Shininess_Slider">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="Material_Specular_Label">
+            <property name="text">
+             <string>specular :</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLabel" name="Material_Shininess_Label">
+            <property name="text">
+             <string>shininess :</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="LerpTab">
+         <attribute name="title">
+          <string>Lerp</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_8">
+          <item>
+           <widget class="QSlider" name="ColorLerpSlider">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="ColorLerpLabel">
+            <property name="text">
+             <string>TextLabel</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>OpenGLWidget</class>
+   <extends>QOpenGLWidget</extends>
+   <header>openglwidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
